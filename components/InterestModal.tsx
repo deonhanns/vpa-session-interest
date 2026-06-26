@@ -128,4 +128,11 @@ export default function InterestModal({ session, onClose, onSuccess }: Props) {
               className="flex-1 text-white rounded-lg py-2 text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
               style={{background:"#E07B39"}}
             >
-              {loading ? "
+              {loading ? "Saving…" : "I'm interested →"}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
