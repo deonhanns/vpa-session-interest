@@ -15,7 +15,7 @@ export default function InterestModal({ session, onClose, onSuccess }: Props) {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const track = trackConfig[session.track];
+  const track = trackConfig[session.track as Exclude<typeof session.track, "break">];
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
