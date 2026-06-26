@@ -34,7 +34,7 @@ export default async function Home() {
           Which sessions are you interested in?
         </h1>
         <p className="text-sm text-stone-300 leading-relaxed">
-          Let us know which sessions you'd like to attend. We'll send you a confirmation
+          Let us know which sessions you&apos;d like to attend. We&apos;ll send you a confirmation
           and use this to help plan the programme. Not registered yet?{" "}
           <a
             href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
@@ -48,7 +48,7 @@ export default async function Home() {
         </p>
       </div>
 
-      {/* Track legend */}
+      {/* Track legend — exclude break */}
       <div className="flex flex-wrap gap-2 mb-6">
         {(Object.entries(trackConfig) as [string, typeof trackConfig[keyof typeof trackConfig]][]).map(([key, t]) => (
           <span key={key} className={`text-xs font-medium px-2 py-0.5 rounded border ${t.bg} ${t.text} ${t.border}`}>
@@ -57,9 +57,9 @@ export default async function Home() {
         ))}
       </div>
 
-      {/* Sessions by day */}
+      {/* Sessions by day — skip break slots */}
       {days.map((day) => {
-        const daySessions = sessions.filter((s) => s.day === day);
+        const daySessions = sessions.filter((s) => s.day === day && s.track !== "break");
         if (!daySessions.length) return null;
         return (
           <div key={day} className="mb-8">
