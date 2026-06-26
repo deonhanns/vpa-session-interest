@@ -23,7 +23,7 @@ export default async function Home() {
   const counts = await getCounts();
 
   return (
-    <div className="min-w-0 px-4 py-6 max-w-2xl mx-auto">
+    <div className="min-w-0 px-4 py-6 max-w-2xl mx-auto" style={{minHeight: "2000px"}}>
 
       {/* Header */}
       <div className="bg-[#1A1A1A] rounded-xl px-5 py-5 mb-6">
