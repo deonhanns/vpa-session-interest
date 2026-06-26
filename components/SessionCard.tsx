@@ -63,4 +63,11 @@ export default function SessionCard({ session, initialCount }: Props) {
 
       {showModal && (
         <InterestModal
-          session={s
+          session={session}
+          onClose={() => setShowModal(false)}
+          onSuccess={handleSuccess}
+        />
+      )}
+    </>
+  );
+}
