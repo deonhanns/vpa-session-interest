@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Session } from "@/lib/sessions";
 import { trackConfig } from "@/lib/sessions";
 import InterestModal from "./InterestModal";
+import Toast from "./Toast";
 
 type Props = {
   session: Session;
@@ -14,12 +15,14 @@ export default function SessionCard({ session, initialCount }: Props) {
   const [count, setCount] = useState(initialCount);
   const [done, setDone] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   const track = trackConfig[session.track];
 
   function handleSuccess() {
     setDone(true);
     setCount((c) => c + 1);
     setShowModal(false);
+    setShowToast(true);
   }
 
   return (
@@ -45,15 +48,17 @@ export default function SessionCard({ session, initialCount }: Props) {
               : "Be the first to express interest"}
           </span>
           {done ? (
-            <span className="text-xs font-semibold rounded-full px-3 py-1"
-              style={{background:"#FEF0E7", color:"#E07B39", border:"1px solid #F4B896"}}>
+            <span
+              className="text-xs font-semibold rounded-full px-3 py-1"
+              style={{ background: "#FEF0E7", color: "#E07B39", border: "1px solid #F4B896" }}
+            >
               ✓ You&apos;re on the list
             </span>
           ) : (
             <button
               onClick={() => setShowModal(true)}
-              className="text-xs font-semibold rounded-full px-3 py-1 transition-colors hover:opacity-90"
-              style={{background:"#FEF0E7", color:"#E07B39", border:"1px solid #F4B896"}}
+              className="text-xs font-semibold rounded-full px-3 py-1 transition-opacity hover:opacity-90"
+              style={{ background: "#FEF0E7", color: "#E07B39", border: "1px solid #F4B896" }}
             >
               I&apos;m interested →
             </button>
@@ -66,6 +71,14 @@ export default function SessionCard({ session, initialCount }: Props) {
           session={session}
           onClose={() => setShowModal(false)}
           onSuccess={handleSuccess}
+        />
+      )}
+
+      {showToast && (
+        <Toast
+          message="You're on the list!"
+          sub={`We'll be in touch about: ${session.title.length > 40 ? session.title.slice(0, 40) + "…" : session.title}`}
+          onDone={() => setShowToast(false)}
         />
       )}
     </>
