@@ -26,20 +26,22 @@ export default async function Home() {
     <div className="min-w-0 px-4 py-6 max-w-2xl mx-auto">
 
       {/* Header */}
-      <div className="mb-6">
-        <p className="text-xs font-semibold text-blue-700 uppercase tracking-widest mb-1">
+      <div className="bg-[#1A1A1A] rounded-xl px-5 py-5 mb-6">
+        <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{color:"#E07B39"}}>
           IFVP Cape Town Summit 2026
         </p>
-        <h1 className="text-2xl font-bold text-gray-900 leading-tight mb-2">
+        <h1 className="text-xl font-bold text-white leading-tight mb-2">
           Which sessions are you interested in?
         </h1>
-        <p className="text-sm text-gray-500 leading-relaxed">
-          Let us know which sessions you'd like to attend. We'll send you a confirmation and use this to help plan the programme. Not registered yet?{" "}
+        <p className="text-sm text-stone-300 leading-relaxed">
+          Let us know which sessions you'd like to attend. We'll send you a confirmation
+          and use this to help plan the programme. Not registered yet?{" "}
           <a
             href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-700 font-semibold underline"
+            className="font-semibold underline"
+            style={{color:"#E07B39"}}
           >
             Register here →
           </a>
@@ -61,8 +63,8 @@ export default async function Home() {
         if (!daySessions.length) return null;
         return (
           <div key={day} className="mb-8">
-            <div className="bg-slate-800 text-white rounded-lg px-4 py-3 mb-3">
-              <h2 className="text-sm font-bold tracking-wide">{day}</h2>
+            <div className="rounded-lg px-4 py-3 mb-3" style={{background:"#E07B39"}}>
+              <h2 className="text-sm font-bold text-white tracking-wide">{day}</h2>
             </div>
             <div className="flex flex-col gap-3">
               {daySessions.map((session) => (
@@ -78,15 +80,16 @@ export default async function Home() {
       })}
 
       {/* Footer */}
-      <div className="border-t border-gray-200 pt-6 mt-2 text-center">
-        <p className="text-xs text-gray-400 mb-2">
+      <div className="border-t border-stone-200 pt-6 mt-2 text-center">
+        <p className="text-xs text-stone-400 mb-3">
           Century City Conference Centre · Cape Town · 6–9 October 2026
         </p>
         <a
           href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-blue-700 text-white text-sm font-semibold rounded-lg px-6 py-2.5 hover:bg-blue-800 transition-colors"
+          className="inline-block text-white text-sm font-semibold rounded-lg px-6 py-2.5 transition-opacity hover:opacity-90"
+          style={{background:"#E07B39"}}
         >
           Register for the full summit →
         </a>
