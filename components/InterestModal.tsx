@@ -41,7 +41,7 @@ export default function InterestModal({ session, onClose, onSuccess }: Props) {
       const json = await res.json();
 
       if (json.already) {
-        onSuccess(); // treat as success — they're already on the list
+        onSuccess();
         return;
       }
 
@@ -61,10 +61,11 @@ export default function InterestModal({ session, onClose, onSuccess }: Props) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "rgba(0,0,0,0.5)" }}
+      style={{ background: "rgba(0,0,0,0.6)" }}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div className="bg-white rounded-xl shadow-2xl w-full max-w-md p-6">
+        {/* Modal header */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1 pr-4">
             <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded border mb-2 ${track.bg} ${track.text} ${track.border}`}>
@@ -72,38 +73,42 @@ export default function InterestModal({ session, onClose, onSuccess }: Props) {
             </span>
             <h2 className="text-base font-bold text-gray-900 leading-tight">{session.title}</h2>
             {session.presenter && (
-              <p className="text-sm text-gray-500 mt-1">{session.presenter}</p>
+              <p className="text-sm text-stone-500 mt-1">{session.presenter}</p>
             )}
-            <p className="text-xs text-gray-400 mt-0.5">{session.day} · {session.time}</p>
+            <p className="text-xs text-stone-400 mt-0.5">{session.day} · {session.time}</p>
           </div>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-xl leading-none flex-shrink-0">×</button>
+          <button
+            onClick={onClose}
+            className="text-stone-400 hover:text-stone-600 text-xl leading-none flex-shrink-0"
+          >×</button>
         </div>
 
-        <p className="text-sm text-gray-600 mb-4">
-          Enter your details and we'll note your interest. You'll get a confirmation email — and a nudge to register if you haven't yet.
+        <p className="text-sm text-stone-600 mb-4">
+          Enter your details and we'll note your interest. You'll receive a confirmation email — and a nudge to register if you haven't yet.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-3">
           <div>
-            <label className="block text-xs font-semibold text-gray-600 mb-1">Your name</label>
+            <label className="block text-xs font-semibold text-stone-600 mb-1">Your name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Jane Smith"
               required
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-stone-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2"
+              style={{"--tw-ring-color": "#E07B39"} as React.CSSProperties}
             />
           </div>
           <div>
-            <label className="block text-xs font-semibold text-gray-600 mb-1">Email address</label>
+            <label className="block text-xs font-semibold text-stone-600 mb-1">Email address</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="jane@example.com"
               required
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-stone-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2"
             />
           </div>
 
@@ -113,20 +118,14 @@ export default function InterestModal({ session, onClose, onSuccess }: Props) {
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 border border-gray-300 text-gray-600 rounded-lg py-2 text-sm font-medium hover:bg-gray-50"
+              className="flex-1 border border-stone-300 text-stone-600 rounded-lg py-2 text-sm font-medium hover:bg-stone-50"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 bg-blue-700 text-white rounded-lg py-2 text-sm font-semibold hover:bg-blue-800 disabled:opacity-50"
+              className="flex-1 text-white rounded-lg py-2 text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
+              style={{background:"#E07B39"}}
             >
-              {loading ? "Saving…" : "I'm interested →"}
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
+              {loading ? "
