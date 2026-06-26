@@ -16,7 +16,7 @@ export default function SessionCard({ session, initialCount }: Props) {
   const [done, setDone] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showToast, setShowToast] = useState(false);
-  const track = trackConfig[session.track];
+  const track = trackConfig[session.track as Exclude<typeof session.track, "break">];
 
   function handleSuccess() {
     setDone(true);
