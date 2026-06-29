@@ -1,4 +1,4 @@
-export type Track = "art" | "facilitation" | "business" | "plenary" | "social" | "break";
+export type Track = "art" | "facilitation" | "business" | "plenary" | "keynote" | "social" | "break";
 
 export type Session = {
   id: string;
@@ -16,7 +16,7 @@ export const sessions: Session[] = [
 
   // WEDNESDAY 7 OCTOBER
   { id: "wed-breakfast", day: "Wednesday, 7 October", time: "08:00–08:30", title: "Breakfast", presenter: "", track: "break" },
-  { id: "wed-opening", day: "Wednesday, 7 October", time: "08:30–10:00", title: "Opening & Welcome to Africa! Keynote: The Art of Process Design with the Group Graphics Keyboard", presenter: "David Sibbet", track: "plenary" },
+  { id: "wed-opening", day: "Wednesday, 7 October", time: "08:30–10:00", title: "Opening & Welcome to Africa! Keynote: The Art of Process Design with the Group Graphics Keyboard", presenter: "David Sibbet", track: "keynote" },
   { id: "wed-break1", day: "Wednesday, 7 October", time: "10:00–10:30", title: "Break", presenter: "", track: "break" },
   { id: "wed-flare", day: "Wednesday, 7 October", time: "10:30–12:00", title: "Drawing Tricky Concepts More Creatively with FLARE", presenter: "Ben Crothers", track: "art" },
   { id: "wed-nnm", day: "Wednesday, 7 October", time: "10:30–12:00", title: "Neuro-Narrative Mapping", presenter: "Deon Hanns & Jo Hobson", track: "facilitation" },
@@ -64,6 +64,7 @@ export const sessions: Session[] = [
 ];
 
 export const trackConfig: Record<Exclude<Track, "break">, { label: string; bg: string; text: string; border: string }> = {
+  keynote:      { label: "Keynote",               bg: "bg-red-100",   text: "text-red-800",   border: "border-red-300"   },
   art:          { label: "The Art of the Line",   bg: "bg-amber-100", text: "text-amber-800", border: "border-amber-300" },
   facilitation: { label: "Drawn to Facilitation", bg: "bg-green-100", text: "text-green-800", border: "border-green-300" },
   business:     { label: "Business Builders",      bg: "bg-blue-100",  text: "text-blue-800",  border: "border-blue-300"  },
