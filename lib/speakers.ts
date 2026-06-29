@@ -221,7 +221,7 @@ export const speakers: Speaker[] = [
     sessionDescription: "What if the tourism industry could think more clearly, communicate more effectively, and make better decisions through visual thinking? This hands-on session travels through the tourism value chain, discovering how Visual Thinking tools can be applied at every stage — from customer experience design to team alignment to strategic planning.",
     track: "business",
     photo: img("19-TpVF0OqBbqj15Uc77bvCWu9wURbsYl"),
-    videoUrl: "",
+    videoUrl: "https://youtube.com/shorts/ikXnBPCnVSI",
     sessionId: "thu-tourism"
   },
   {
