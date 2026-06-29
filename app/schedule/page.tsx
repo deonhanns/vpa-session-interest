@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { sessions, days, trackConfig } from "@/lib/sessions";
 import type { Session } from "@/lib/sessions";
 import Toast from "@/components/Toast";
+import { Suspense } from "react";
 
 type Counts = Record<string, number>;
 
@@ -22,10 +24,12 @@ function SessionCard({
   session,
   count,
   onSuccess,
+  highlight,
 }: {
   session: Session;
   count: number;
   onSuccess: (sessionId: string) => void;
+  highlight: boolean;
 }) {
   const [localCount, setLocalCount] = useState(count);
   const [done, setDone] = useState(false);
@@ -38,6 +42,7 @@ function SessionCard({
   const isInteractable =
     session.track !== "social" &&
     session.track !== "plenary" &&
+    session.track !== "keynote" &&
     session.track !== "break";
 
   const track =
@@ -85,7 +90,14 @@ function SessionCard({
   }
 
   return (
-    <div className="bg-white rounded-lg border border-stone-200 shadow-sm overflow-hidden">
+    <div
+      id={session.id}
+      className="bg-white rounded-lg border shadow-sm overflow-hidden transition-all"
+      style={{
+        borderColor: highlight ? "#E07B39" : "#e7e5e4",
+        boxShadow: highlight ? "0 0 0 2px #E07B3940" : undefined,
+      }}
+    >
       <div className="p-4">
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1 min-w-0">
@@ -116,7 +128,7 @@ function SessionCard({
                 className="text-xs font-semibold rounded-full px-3 py-1"
                 style={{ background: "#FEF0E7", color: "#E07B39", border: "1px solid #F4B896" }}
               >
-                ✓ You&apos;re on the list
+                \u2713 You&apos;re on the list
               </span>
             ) : (
               <button
@@ -124,7 +136,7 @@ function SessionCard({
                 className="text-xs font-semibold rounded-full px-3 py-1 transition-opacity hover:opacity-90"
                 style={{ background: "#FEF0E7", color: "#E07B39", border: "1px solid #F4B896" }}
               >
-                {expanded ? "Cancel ✕" : "I'm interested →"}
+                {expanded ? "Cancel \u2715" : "I'm interested \u2192"}
               </button>
             )}
           </div>
@@ -160,7 +172,7 @@ function SessionCard({
               className="w-full text-white rounded-lg py-2 text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
               style={{ background: "#E07B39" }}
             >
-              {loading ? "Saving…" : "Confirm interest →"}
+              {loading ? "Saving\u2026" : "Confirm interest \u2192"}
             </button>
           </form>
         </div>
@@ -169,11 +181,14 @@ function SessionCard({
   );
 }
 
-export default function SchedulePage() {
-  const [activeDay, setActiveDay] = useState(0);
+function ScheduleInner() {
+  const searchParams = useSearchParams();
+  const dayParam = searchParams.get("day");
+  const [activeDay, setActiveDay] = useState(dayParam ? parseInt(dayParam) : 0);
   const [counts, setCounts] = useState<Counts>({});
   const [toastTitle, setToastTitle] = useState("");
   const [showToast, setShowToast] = useState(false);
+  const [highlightId, setHighlightId] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/counts")
@@ -182,10 +197,29 @@ export default function SchedulePage() {
       .catch(() => {});
   }, []);
 
+  useEffect(() => {
+    if (dayParam !== null) {
+      const day = parseInt(dayParam);
+      if (!isNaN(day)) setActiveDay(day);
+    }
+  }, [dayParam]);
+
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      setHighlightId(hash);
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 300);
+      setTimeout(() => setHighlightId(null), 3000);
+    }
+  }, [activeDay]);
+
   function handleSuccess(sessionId: string) {
     const session = sessions.find((s) => s.id === sessionId);
     if (session) {
-      setToastTitle(session.title.length > 40 ? session.title.slice(0, 40) + "…" : session.title);
+      setToastTitle(session.title.length > 40 ? session.title.slice(0, 40) + "\u2026" : session.title);
       setShowToast(true);
     }
   }
@@ -194,8 +228,6 @@ export default function SchedulePage() {
 
   return (
     <div className="min-w-0 px-4 py-6" style={{ minHeight: "2400px" }}>
-
-      {/* Header */}
       <div className="bg-[#1A1A1A] rounded-xl px-5 py-5 mb-6">
         <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#E07B39" }}>
           IFVP Cape Town Summit 2026
@@ -212,12 +244,11 @@ export default function SchedulePage() {
             className="font-semibold underline"
             style={{ color: "#E07B39" }}
           >
-            Register here →
+            Register here \u2192
           </a>
         </p>
       </div>
 
-      {/* Track legend */}
       <div className="flex flex-wrap gap-2 mb-5">
         {(Object.entries(trackConfig) as [string, typeof trackConfig[keyof typeof trackConfig]][]).map(([key, t]) => (
           <span key={key} className={`text-xs font-medium px-2 py-0.5 rounded border ${t.bg} ${t.text} ${t.border}`}>
@@ -226,7 +257,6 @@ export default function SchedulePage() {
         ))}
       </div>
 
-      {/* Day tabs */}
       <div className="flex gap-2 mb-5 overflow-x-auto pb-1">
         {dayLabels.map((label, i) => (
           <button
@@ -244,12 +274,10 @@ export default function SchedulePage() {
         ))}
       </div>
 
-      {/* Day heading */}
       <div className="rounded-lg px-4 py-3 mb-4" style={{ background: "#E07B39" }}>
         <h2 className="text-sm font-bold text-white tracking-wide">{days[activeDay]}</h2>
       </div>
 
-      {/* Sessions */}
       <div className="flex flex-col gap-2">
         {sessions
           .filter((s) => s.day === days[activeDay])
@@ -262,6 +290,7 @@ export default function SchedulePage() {
                 session={session}
                 count={counts[session.id] ?? 0}
                 onSuccess={handleSuccess}
+                highlight={highlightId === session.id}
               />
             )
           )}
@@ -269,10 +298,9 @@ export default function SchedulePage() {
 
       <p className="text-xs text-stone-400 mt-6 text-center italic">Schedule is subject to change.</p>
 
-      {/* Footer */}
       <div className="border-t border-stone-200 pt-6 mt-4 text-center">
         <p className="text-xs text-stone-400 mb-3">
-          Century City Conference Centre · Cape Town · 6–9 October 2026
+          Century City Conference Centre \u00b7 Cape Town \u00b7 6\u20139 October 2026
         </p>
         <a
           href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
@@ -281,7 +309,7 @@ export default function SchedulePage() {
           className="inline-block text-white text-sm font-semibold rounded-lg px-6 py-2.5 transition-opacity hover:opacity-90"
           style={{ background: "#E07B39" }}
         >
-          Register for the full summit →
+          Register for the full summit \u2192
         </a>
       </div>
 
@@ -293,5 +321,13 @@ export default function SchedulePage() {
         />
       )}
     </div>
+  );
+}
+
+export default function SchedulePage() {
+  return (
+    <Suspense>
+      <ScheduleInner />
+    </Suspense>
   );
 }
