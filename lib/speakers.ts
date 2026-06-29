@@ -15,6 +15,8 @@ export type Speaker = {
   sessionId: string;
 };
 
+const img = (id: string) => `https://drive.google.com/uc?export=view&id=${id}`;
+
 export const speakers: Speaker[] = [
   {
     id: "david-sibbet",
@@ -28,7 +30,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "Conceptual Jazz with the Group Graphics Keyboard",
     sessionDescription: "David's opening keynote introduces his new work on the Art of Process Design — exploring how visual facilitators can work more fluidly and flexibly across formats, using simpler, more interactive practices. He is particularly looking forward to connecting with practitioners who are imagining their way into a world laced with AI and virtual work.",
     track: "keynote",
-    photo: "",
+    photo: img("1iMZrdnT4UeIh724h9uGMxaRNIKTUQvI4"),
     videoUrl: "",
     sessionId: "wed-opening"
   },
@@ -44,8 +46,8 @@ export const speakers: Speaker[] = [
     sessionTitle: "Drawing Tricky Concepts More Creatively with FLARE",
     sessionDescription: "FLARE is a simple but highly effective method for drawing vague, abstract, and complex topics. In this hands-on workshop, participants will practise FLARE by drawing intangible concepts, apply it to turn clichés into clarity, and discover how to use the prompts in their facilitation practice to help teams have more insightful conversations.",
     track: "art",
-    photo: "",
-    videoUrl: "",
+    photo: img("1aRnGTQbKnCnHBAQ3sh5g5H1tL9dwiiZ3"),
+    videoUrl: "https://youtu.be/nI_FrceQnkE",
     sessionId: "wed-flare"
   },
   {
@@ -60,8 +62,8 @@ export const speakers: Speaker[] = [
     sessionTitle: "Neuro Narrative Mapping: The Tracker's Code",
     sessionDescription: "This session unveils the Neuro Narrative Mapping System — translating the Science of Tracking and the visual intelligence developed by the San ancestors into a framework for modern facilitators. Participants will experience how to use these tools to help individuals and teams move from problem fog to implementable clarity through drawing, metaphor, and collective intelligence.",
     track: "facilitation",
-    photo: "",
-    videoUrl: "",
+    photo: img("1YHbwjXXWhrdDeA2Whd1ASGkLtpCUfVmm"),
+    videoUrl: "https://youtu.be/zB26oI3hEDA",
     sessionId: "wed-nnm"
   },
   {
@@ -76,7 +78,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "Drawing the Line: A Privacy-First, Human-First AI Blueprint",
     sessionDescription: "As AI reshapes how organisations think and communicate, visual practitioners face new ethical questions. This session explores a framework for navigating AI integration in visual practice — putting privacy and human dignity at the centre of every decision.",
     track: "business",
-    photo: "",
+    photo: img("1gRRyJ7jMW2hzxaByDHlB5OLoFxuI9kiR"),
     videoUrl: "",
     sessionId: "wed-ai-blueprint"
   },
@@ -92,7 +94,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "Symbol Safari: Co-Creating Meaning",
     sessionDescription: "This hands-on session introduces Bikablo®'s Symbol Safari — an engaging approach that helps groups collaboratively transform abstract concepts into clear, meaningful visuals. Rather than relying on inspiration or creative talent, participants explore a structured yet playful way of inventing metaphors together.",
     track: "art",
-    photo: "",
+    photo: img("1cae3cOL9K2KuV7wFwjjncpDqd45qgCUY"),
     videoUrl: "",
     sessionId: "wed-symbol"
   },
@@ -108,7 +110,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "Leveraging the Facilitation & Graphic Recorder Partnership",
     sessionDescription: "When graphic recording and facilitation are treated as separate services, value is left on the table. When designed together — with scope, roles, and creative parameters clarified from the outset — something far more powerful becomes possible. This session explores what it means for facilitators and graphic recorders to operate as a true design team.",
     track: "facilitation",
-    photo: "",
+    photo: img("1Q-XUlqkCcHo1_Bn6T2mmI-l8DJePKSuw"),
     videoUrl: "",
     sessionId: "wed-partnership"
   },
@@ -124,7 +126,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "Don't Panic! A Survival Guide for Recorders",
     sessionDescription: "A hands-on workshop focused on techniques for quickly pivoting and adjusting graphic capture during a shifting conversation. Participants will learn simple and effective techniques to enhance their ability to think and draw quickly in real-time situations — including tips for handling fastballs, curveballs, and anything else thrown at them during a live session.",
     track: "business",
-    photo: "",
+    photo: img("1Jx7nYgiB0ev4T749Lg1Jq1kvdQ8M4_AT"),
     videoUrl: "",
     sessionId: "wed-survival"
   },
@@ -140,7 +142,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "People in Motion: Drawing Characters that Speak",
     sessionDescription: "A fast-paced, interactive session that brings visual notes to life by sketching people on the move — creating emotion, exploring visual metaphors, and telling colourful, memorable stories. Participants will learn how to draw beyond stick figures, introduce gender, race, and cultural clues, and tell a simple story through positioning of text and image.",
     track: "art",
-    photo: "",
+    photo: img("10VDe_FgU6VGOgzD9sSYpfDWsFyKnairq"),
     videoUrl: "",
     sessionId: "thu-characters"
   },
@@ -156,8 +158,8 @@ export const speakers: Speaker[] = [
     sessionTitle: "Visual Tools to Change an Industry — Meeting by Meeting",
     sessionDescription: "This session shares insights from an international Human Rights programme in Asian factories, where visual facilitation supported dialogue between factory workers and management. Participants will explore four distinct roles a visual facilitator can play in systemic change, discovering how to equip others to carry the work forward long after you have left the room.",
     track: "facilitation",
-    photo: "",
-    videoUrl: "",
+    photo: img("10b3K6391uizt5c1c1pbpRD7EC3O-6zkd"),
+    videoUrl: "https://youtube.com/shorts/mtMum9PUlgM",
     sessionId: "thu-visual-tools"
   },
   {
@@ -172,7 +174,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "The Visual Journey: Transforming Tourism Experience through Visual Thinking",
     sessionDescription: "What if the tourism industry could think more clearly, communicate more effectively, and make better decisions through visual thinking? This hands-on session travels through the tourism value chain, discovering how Visual Thinking tools can be applied at every stage — from customer experience design to team alignment to strategic planning.",
     track: "business",
-    photo: "",
+    photo: img("14oD-4ynWGrMwfdgxuqF_O7C4mf42AFfu"),
     videoUrl: "",
     sessionId: "thu-tourism"
   },
@@ -188,7 +190,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "Draw from Everything",
     sessionDescription: "What does oil painting have to do with graphic recording? More than you think. This workshop invites participants to surface their own creative pursuits — past or present — extract the transferable principles within them, and map those insights onto real challenges in their graphic recording or facilitation work. No two people will leave with the same takeaways, because no two people are drawing from the same well.",
     track: "facilitation",
-    photo: "",
+    photo: img("1_DjRRjXIMffsu9Y4h1kUmQRVO3MS_Li9"),
     videoUrl: "",
     sessionId: "thu-draw"
   },
@@ -204,7 +206,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "From Idea to Impact: Building a Visual Practitioners Community That Actually Works",
     sessionDescription: "Dana shares the story of founding Visual Practitioners Switzerland — from the initial idea to a growing, active community — including the challenges, tensions, and decisions that shaped its development. Rather than a polished success story, this session focuses on what actually happens behind the scenes when building a professional community in an emerging field.",
     track: "business",
-    photo: "",
+    photo: img("1PfEpWtkObdEIFQ2LBO-R4rV6g4Y0M_NY"),
     videoUrl: "",
     sessionId: "thu-community"
   },
@@ -220,7 +222,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "Bringing Visual Practices into Education: Beyond a Global Framework for Teachers",
     sessionDescription: "The IFVP Institute Educators Committee is building an international framework to help teachers worldwide embed visual practices into their daily work — and this session invites participants to help shape it. This is not a presentation about a framework. It is an invitation to co-create one.",
     track: "business",
-    photo: "",
+    photo: img("1WNJDeZuzVr9QwVTzVwsQc68nTg2UNuTR"),
     videoUrl: "",
     sessionId: "fri-education"
   },
@@ -236,8 +238,8 @@ export const speakers: Speaker[] = [
     sessionTitle: "The Art of the Line: Situating Graphic Recording within the Visual Arts",
     sessionDescription: "This workshop situates graphic recording within a broader art-historical lineage of verbal-visual communication spanning tens of thousands of years — from Southern African cave art through to contemporary artists. Drawing on fine arts theory, the session asks: what kind of knowledge does a drawn line produce? Are we, as graphic recorders, scribes or artists? Translators or participants? The session does not teach drawing technique. It reframes what drawing already is.",
     track: "art",
-    photo: "",
-    videoUrl: "",
+    photo: img("1fxYo86dOUIkUEoFPQW_yEPt6e3IcDp95"),
+    videoUrl: "https://youtu.be/YLNicEpqje4",
     sessionId: "fri-situating"
   },
   {
@@ -252,8 +254,8 @@ export const speakers: Speaker[] = [
     sessionTitle: "From Scribe to Strategic Ally: Designing Partnership in Facilitation",
     sessionDescription: "Many visual practitioners know this feeling: brought in late, positioned as support, unable to influence the design or the outcomes. It feels like a drawing problem. It isn't. It is a partnership design challenge. This session explores what shifts when we intentionally design partnership in facilitation, working with a practical framework built around Identity, Design, and Intervention.",
     track: "facilitation",
-    photo: "",
-    videoUrl: "",
+    photo: img("1jkuKmIe3IMiGmJSqTCgyB7HyDWGU2gBI"),
+    videoUrl: "https://youtu.be/0Z72yBHW_tk",
     sessionId: "fri-scribe"
   },
   {
@@ -268,8 +270,8 @@ export const speakers: Speaker[] = [
     sessionTitle: "Drawing Voices: Graphic Facilitation with Traditional Peoples in Brazil",
     sessionDescription: "What happens when the facilitator puts down assumptions and picks up a marker in a community where words alone are not enough? This session shares stories from the field — real experiences of using graphic facilitation in cross-cultural and multilingual settings with traditional peoples in Brazil. Every community deserves a visual record of its own story.",
     track: "business",
-    photo: "",
-    videoUrl: "",
+    photo: img("1ssv8XiuIUg1329EOqaeDDen_X2--qtqG"),
+    videoUrl: "https://youtube.com/shorts/Q1SdClM9pX0",
     sessionId: "fri-brazil"
   },
   {
