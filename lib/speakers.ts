@@ -148,11 +148,11 @@ export const speakers: Speaker[] = [
   {
     id: "james-durno",
     name: "James Durno",
-    role: "Graphic Recorder & Visual Facilitator",
+    role: "Graphic Recorder & Visual Communications Consultant",
     company: "",
     country: "South Africa",
     flag: "🇿🇦",
-    bio: "James Durno is a graphic recorder and visual facilitator based in South Africa, co-presenting with Nora Sheffe on the power of intentional partnership between facilitators and graphic recorders. His work focuses on elevating collaborative experiences through the deliberate design of the facilitator-recorder relationship.",
+    bio: "James Durno is widely regarded as a pioneer of graphic recording in South Africa, with over 22 years of experience as a Visual Communications Consultant and Fine Artist. He helps organisations think visually — translating complex conversations, strategies, and ideas into engaging visual narratives in real time. His clients include Microsoft, Coca-Cola, Anglo American, Barclays, Vodacom, Discovery, Investec, Deloitte, and Wits Business School, among many others.",
     sessionTitle: "Leveraging the Facilitation & Graphic Recorder Partnership",
     sessionDescription: "When graphic recording and facilitation are treated as separate services, value is left on the table. When designed together — with scope, roles, and creative parameters clarified from the outset — something far more powerful becomes possible. This session explores what it means for facilitators and graphic recorders to operate as a true design team. Co-presented with Nora Sheffe.",
     track: "facilitation",
