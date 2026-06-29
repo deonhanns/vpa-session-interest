@@ -15,7 +15,8 @@ export type Speaker = {
   sessionId: string;
 };
 
-const img = (id: string) => `https://drive.google.com/uc?export=view&id=${id}`;
+// Google Drive public image URL helper
+const img = (id: string) => `https://lh3.googleusercontent.com/d/${id}`;
 
 export const speakers: Speaker[] = [
   {

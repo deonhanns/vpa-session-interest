@@ -20,21 +20,34 @@ function VideoPlaceholder() {
   );
 }
 
-function VideoEmbed({ url }: { url: string }) {
-  const isYouTube = url.includes("youtube.com") || url.includes("youtu.be");
-  const isVimeo = url.includes("vimeo.com");
-
-  let embedUrl = url;
-  if (isYouTube) {
-    const id = url.includes("youtu.be")
-      ? url.split("youtu.be/")[1]
-      : new URL(url).searchParams.get("v");
-    embedUrl = `https://www.youtube.com/embed/${id}`;
-  } else if (isVimeo) {
-    const id = url.split("vimeo.com/")[1];
-    embedUrl = `https://player.vimeo.com/video/${id}`;
+function getEmbedUrl(url: string): string {
+  // YouTube Shorts
+  if (url.includes("youtube.com/shorts/")) {
+    const id = url.split("youtube.com/shorts/")[1].split("?")[0];
+    return `https://www.youtube.com/embed/${id}`;
   }
+  // Standard youtu.be
+  if (url.includes("youtu.be/")) {
+    const id = url.split("youtu.be/")[1].split("?")[0];
+    return `https://www.youtube.com/embed/${id}`;
+  }
+  // Standard youtube.com/watch?v=
+  if (url.includes("youtube.com/watch")) {
+    try {
+      const id = new URL(url).searchParams.get("v");
+      return `https://www.youtube.com/embed/${id}`;
+    } catch { return url; }
+  }
+  // Vimeo
+  if (url.includes("vimeo.com/")) {
+    const id = url.split("vimeo.com/")[1].split("?")[0];
+    return `https://player.vimeo.com/video/${id}`;
+  }
+  return url;
+}
 
+function VideoEmbed({ url }: { url: string }) {
+  const embedUrl = getEmbedUrl(url);
   return (
     <div className="w-full rounded-lg overflow-hidden" style={{ aspectRatio: "16/9" }}>
       <iframe
@@ -49,12 +62,14 @@ function VideoEmbed({ url }: { url: string }) {
 
 function SpeakerCard({ speaker }: { speaker: Speaker }) {
   const [expanded, setExpanded] = useState(false);
+  const [imgError, setImgError] = useState(false);
+
   const track = speaker.track !== "plenary"
     ? trackConfig[speaker.track as Exclude<typeof speaker.track, "plenary">]
     : { label: "Plenary", bg: "bg-slate-100", text: "text-slate-700", border: "border-slate-300" };
 
   const shortBio = speaker.bio.length > 180
-    ? speaker.bio.slice(0, 180).trim() + "…"
+    ? speaker.bio.slice(0, 180).trim() + "\u2026"
     : speaker.bio;
 
   return (
@@ -64,11 +79,12 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
         className="w-full flex items-center justify-center"
         style={{ background: "#F5F0EB", height: "200px" }}
       >
-        {speaker.photo ? (
+        {speaker.photo && !imgError ? (
           <img
             src={speaker.photo}
             alt={speaker.name}
             className="w-full h-full object-cover"
+            onError={() => setImgError(true)}
           />
         ) : (
           <div className="flex flex-col items-center gap-2">
@@ -92,7 +108,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
         {/* Name & role */}
         <h2 className="text-base font-bold text-gray-900 leading-snug">{speaker.name}</h2>
         <p className="text-xs text-stone-500 mt-0.5 mb-1">
-          {speaker.role}{speaker.company ? ` · ${speaker.company}` : ""}
+          {speaker.role}{speaker.company ? ` \u00b7 ${speaker.company}` : ""}
         </p>
         <p className="text-xs mb-3" style={{ color: "#E07B39" }}>
           {speaker.flag} {speaker.country}
@@ -117,11 +133,11 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
             className="text-xs font-semibold mb-3"
             style={{ color: "#E07B39" }}
           >
-            {expanded ? "Show less ↑" : "Read more ↓"}
+            {expanded ? "Show less \u2191" : "Read more \u2193"}
           </button>
         )}
 
-        {/* Session description — only when expanded */}
+        {/* Session description - only when expanded */}
         {expanded && (
           <div className="mt-2 mb-3 border-t border-stone-100 pt-3">
             <p className="text-xs font-semibold text-stone-400 uppercase tracking-wide mb-1">About the session</p>
@@ -148,15 +164,15 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
               className="text-xs font-semibold px-3 py-1.5 rounded-full border transition-opacity hover:opacity-80"
               style={{ color: "#E07B39", borderColor: "#F4B896", background: "#FEF9F5" }}
             >
-              Website →
+              Website \u2192
             </a>
           )}
           <a
-            href={`/schedule`}
+            href="/schedule"
             className="text-xs font-semibold px-3 py-1.5 rounded-full border transition-opacity hover:opacity-80"
             style={{ color: "#1A1A1A", borderColor: "#D5D5D5", background: "#F5F0EB" }}
           >
-            View in schedule →
+            View in schedule \u2192
           </a>
         </div>
       </div>
@@ -197,7 +213,7 @@ export default function SpeakersPage() {
             className="font-semibold underline"
             style={{ color: "#E07B39" }}
           >
-            Register here →
+            Register here \u2192
           </a>
         </p>
       </div>
@@ -223,7 +239,7 @@ export default function SpeakersPage() {
       {/* Speaker count */}
       <p className="text-xs text-stone-400 mb-4">
         {filtered.length} {filtered.length === 1 ? "speaker" : "speakers"}
-        {filter !== "all" ? ` in this track` : " confirmed"}
+        {filter !== "all" ? " in this track" : " confirmed"}
       </p>
 
       {/* Grid */}
@@ -236,7 +252,7 @@ export default function SpeakersPage() {
       {/* Footer */}
       <div className="border-t border-stone-200 pt-6 mt-8 text-center">
         <p className="text-xs text-stone-400 mb-3">
-          Century City Conference Centre · Cape Town · 6–9 October 2026
+          Century City Conference Centre \u00b7 Cape Town \u00b7 6\u20139 October 2026
         </p>
         <a
           href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
@@ -245,7 +261,7 @@ export default function SpeakersPage() {
           className="inline-block text-white text-sm font-semibold rounded-lg px-6 py-2.5 transition-opacity hover:opacity-90"
           style={{ background: "#E07B39" }}
         >
-          Register for the full summit →
+          Register for the full summit \u2192
         </a>
       </div>
     </div>
