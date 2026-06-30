@@ -128,7 +128,7 @@ function SessionCard({
                 className="text-xs font-semibold rounded-full px-3 py-1"
                 style={{ background: "#FEF0E7", color: "#E07B39", border: "1px solid #F4B896" }}
               >
-                \u2713 You&apos;re on the list
+                ✓ You&apos;re on the list
               </span>
             ) : (
               <button
@@ -136,7 +136,7 @@ function SessionCard({
                 className="text-xs font-semibold rounded-full px-3 py-1 transition-opacity hover:opacity-90"
                 style={{ background: "#FEF0E7", color: "#E07B39", border: "1px solid #F4B896" }}
               >
-                {expanded ? "Cancel \u2715" : "I'm interested \u2192"}
+                {expanded ? "Cancel ✕" : "I'm interested →"}
               </button>
             )}
           </div>
@@ -172,7 +172,7 @@ function SessionCard({
               className="w-full text-white rounded-lg py-2 text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
               style={{ background: "#E07B39" }}
             >
-              {loading ? "Saving\u2026" : "Confirm interest \u2192"}
+              {loading ? "Saving…" : "Confirm interest →"}
             </button>
           </form>
         </div>
@@ -219,7 +219,7 @@ function ScheduleInner() {
   function handleSuccess(sessionId: string) {
     const session = sessions.find((s) => s.id === sessionId);
     if (session) {
-      setToastTitle(session.title.length > 40 ? session.title.slice(0, 40) + "\u2026" : session.title);
+      setToastTitle(session.title.length > 40 ? session.title.slice(0, 40) + "…" : session.title);
       setShowToast(true);
     }
   }
@@ -244,7 +244,7 @@ function ScheduleInner() {
             className="font-semibold underline"
             style={{ color: "#E07B39" }}
           >
-            Register here \u2192
+            Register here →
           </a>
         </p>
       </div>
@@ -300,7 +300,7 @@ function ScheduleInner() {
 
       <div className="border-t border-stone-200 pt-6 mt-4 text-center">
         <p className="text-xs text-stone-400 mb-3">
-          Century City Conference Centre \u00b7 Cape Town \u00b7 6\u20139 October 2026
+          Century City Conference Centre · Cape Town · 6–9 October 2026
         </p>
         <a
           href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
@@ -309,7 +309,7 @@ function ScheduleInner() {
           className="inline-block text-white text-sm font-semibold rounded-lg px-6 py-2.5 transition-opacity hover:opacity-90"
           style={{ background: "#E07B39" }}
         >
-          Register for the full summit \u2192
+          Register for the full summit →
         </a>
       </div>
 
