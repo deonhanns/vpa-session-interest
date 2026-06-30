@@ -56,6 +56,26 @@ function VideoEmbed({ url }: { url: string }) {
   );
 }
 
+function FlagIcons({ codes }: { codes: string[] }) {
+  if (!codes || codes.length === 0) return null;
+  return (
+    <span className="inline-flex items-center gap-1">
+      {codes.map((code) => (
+        <img
+          key={code}
+          src={`https://flagcdn.com/w40/${code}.png`}
+          srcSet={`https://flagcdn.com/w80/${code}.png 2x`}
+          alt={code.toUpperCase()}
+          width="16"
+          height="12"
+          className="inline-block rounded-sm shadow-sm"
+          style={{ objectFit: "cover" }}
+        />
+      ))}
+    </span>
+  );
+}
+
 const sessionDayMap: Record<string, number> = {
   "tue-registration": 0, "tue-cocktail": 0,
   "wed-opening": 1, "wed-flare": 1, "wed-nnm": 1, "wed-ai-blueprint": 1,
@@ -118,8 +138,8 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
         <p className="text-xs text-stone-500 mt-0.5 mb-1">
           {speaker.role}{speaker.company ? ` · ${speaker.company}` : ""}
         </p>
-        <p className="text-xs mb-3" style={{ color: "#E07B39" }}>
-          {speaker.flag} {speaker.country}
+        <p className="text-xs mb-3 flex items-center gap-1.5" style={{ color: "#E07B39" }}>
+          <FlagIcons codes={speaker.countryCodes} /> {speaker.country}
         </p>
 
         <div
