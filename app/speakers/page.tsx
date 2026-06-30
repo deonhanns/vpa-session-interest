@@ -56,7 +56,6 @@ function VideoEmbed({ url }: { url: string }) {
   );
 }
 
-// Map session IDs to their day index for deep linking
 const sessionDayMap: Record<string, number> = {
   "tue-registration": 0, "tue-cocktail": 0,
   "wed-opening": 1, "wed-flare": 1, "wed-nnm": 1, "wed-ai-blueprint": 1,
@@ -78,7 +77,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
     : { label: "Plenary", bg: "bg-slate-100", text: "text-slate-700", border: "border-slate-300" };
 
   const shortBio = speaker.bio.length > 180
-    ? speaker.bio.slice(0, 180).trim() + "\u2026"
+    ? speaker.bio.slice(0, 180).trim() + "…"
     : speaker.bio;
 
   const dayIndex = sessionDayMap[speaker.sessionId] ?? 1;
@@ -117,7 +116,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
 
         <h2 className="text-base font-bold text-gray-900 leading-snug">{speaker.name}</h2>
         <p className="text-xs text-stone-500 mt-0.5 mb-1">
-          {speaker.role}{speaker.company ? ` \u00b7 ${speaker.company}` : ""}
+          {speaker.role}{speaker.company ? ` · ${speaker.company}` : ""}
         </p>
         <p className="text-xs mb-3" style={{ color: "#E07B39" }}>
           {speaker.flag} {speaker.country}
@@ -140,7 +139,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
             className="text-xs font-semibold mb-3"
             style={{ color: "#E07B39" }}
           >
-            {expanded ? "Show less \u2191" : "Read more \u2193"}
+            {expanded ? "Show less ↑" : "Read more ↓"}
           </button>
         )}
 
@@ -168,7 +167,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
               className="text-xs font-semibold px-3 py-1.5 rounded-full border transition-opacity hover:opacity-80"
               style={{ color: "#E07B39", borderColor: "#F4B896", background: "#FEF9F5" }}
             >
-              Website \u2192
+              Website →
             </a>
           )}
           <a
@@ -176,7 +175,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
             className="text-xs font-semibold px-3 py-1.5 rounded-full border transition-opacity hover:opacity-80"
             style={{ color: "#1A1A1A", borderColor: "#D5D5D5", background: "#F5F0EB" }}
           >
-            View in schedule \u2192
+            View in schedule →
           </a>
         </div>
       </div>
@@ -215,7 +214,7 @@ export default function SpeakersPage() {
             className="font-semibold underline"
             style={{ color: "#E07B39" }}
           >
-            Register here \u2192
+            Register here →
           </a>
         </p>
       </div>
@@ -250,7 +249,7 @@ export default function SpeakersPage() {
 
       <div className="border-t border-stone-200 pt-6 mt-8 text-center">
         <p className="text-xs text-stone-400 mb-3">
-          Century City Conference Centre \u00b7 Cape Town \u00b7 6\u20139 October 2026
+          Century City Conference Centre · Cape Town · 6–9 October 2026
         </p>
         <a
           href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
@@ -259,7 +258,7 @@ export default function SpeakersPage() {
           className="inline-block text-white text-sm font-semibold rounded-lg px-6 py-2.5 transition-opacity hover:opacity-90"
           style={{ background: "#E07B39" }}
         >
-          Register for the full summit \u2192
+          Register for the full summit →
         </a>
       </div>
     </div>
