@@ -12,7 +12,7 @@ export type Session = {
 export const sessions: Session[] = [
   // TUESDAY 6 OCTOBER
   { id: "tue-registration", day: "Tuesday, 6 October", time: "15:00", title: "Registration at Venue", presenter: "", track: "plenary" },
-  { id: "tue-cocktail", day: "Tuesday, 6 October", time: "18:00–20:00", title: "Cocktail Evening – Two Oceans Aquarium, V&A Waterfront", presenter: "", track: "social" },
+  { id: "tue-cocktail", day: "Tuesday, 6 October", time: "18:00–20:00", title: "Cocktail Evening, Two Oceans Aquarium, V&A Waterfront", presenter: "", track: "social" },
 
   // WEDNESDAY 7 OCTOBER
   { id: "wed-breakfast", day: "Wednesday, 7 October", time: "08:00–08:30", title: "Breakfast", presenter: "", track: "break" },
@@ -34,7 +34,7 @@ export const sessions: Session[] = [
   // THURSDAY 8 OCTOBER
   { id: "thu-breakfast", day: "Thursday, 8 October", time: "08:00–08:30", title: "Breakfast", presenter: "", track: "break" },
   { id: "thu-characters", day: "Thursday, 8 October", time: "08:30–10:00", title: "Drawing Characters that Speak", presenter: "Nick Walsh", track: "art" },
-  { id: "thu-visual-tools", day: "Thursday, 8 October", time: "08:30–10:00", title: "Visual Tools to Change an Industry – Meeting by Meeting", presenter: "Axelle Vanquallie", track: "facilitation" },
+  { id: "thu-visual-tools", day: "Thursday, 8 October", time: "08:30–10:00", title: "Visual Tools to Change an Industry, Meeting by Meeting", presenter: "Axelle Vanquallie", track: "facilitation" },
   { id: "thu-tourism", day: "Thursday, 8 October", time: "08:30–10:00", title: "The Visual Journey: Transforming Tourism Experience through Visual Thinking", presenter: "Sonia Garcia Farina", track: "business" },
   { id: "thu-break1", day: "Thursday, 8 October", time: "10:00–10:30", title: "Break", presenter: "", track: "break" },
   { id: "thu-signature", day: "Thursday, 8 October", time: "10:30–12:00", title: "The Signature Behind Your Sketch", presenter: "Ben Crothers & Axelle Vanquallie", track: "art" },
@@ -48,7 +48,7 @@ export const sessions: Session[] = [
   { id: "thu-openspace-3", day: "Thursday, 8 October", time: "15:50–16:30", title: "Open Space Session 3", presenter: "", track: "plenary" },
   { id: "thu-openspace-feedback", day: "Thursday, 8 October", time: "16:30–17:00", title: "Open Space Feedback Circle", presenter: "", track: "plenary" },
   { id: "thu-agm", day: "Thursday, 8 October", time: "17:00", title: "IFVP Annual General Meeting", presenter: "", track: "plenary" },
-  { id: "thu-gala", day: "Thursday, 8 October", time: "19:00", title: "Gala Dinner – Drum Café", presenter: "", track: "social" },
+  { id: "thu-gala", day: "Thursday, 8 October", time: "19:00", title: "Gala Dinner, Drum Café", presenter: "", track: "social" },
 
   // FRIDAY 9 OCTOBER
   { id: "fri-breakfast", day: "Friday, 9 October", time: "08:00–08:30", title: "Breakfast", presenter: "", track: "break" },
