@@ -66,10 +66,8 @@ function FlagIcons({ codes }: { codes: string[] }) {
           src={`https://flagcdn.com/w40/${code}.png`}
           srcSet={`https://flagcdn.com/w80/${code}.png 2x`}
           alt={code.toUpperCase()}
-          width="16"
-          height="12"
           className="inline-block rounded-sm shadow-sm"
-          style={{ objectFit: "cover" }}
+          style={{ width: "18px", height: "auto", display: "inline-block" }}
         />
       ))}
     </span>
