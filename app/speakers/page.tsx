@@ -226,7 +226,7 @@ export default function SpeakersPage() {
         <p className="text-sm text-stone-300 leading-relaxed">
           Meet the practitioners, pioneers, and thinkers joining us in Cape Town this October.{" "}
           <a
-            href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
+            href="https://book.stripe.com/14AaEZ6ZE6N88ql1eJ5Rm02"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold underline"
@@ -270,7 +270,7 @@ export default function SpeakersPage() {
           Century City Conference Centre · Cape Town · 6–9 October 2026
         </p>
         <a
-          href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
+          href="https://book.stripe.com/14AaEZ6ZE6N88ql1eJ5Rm02"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block text-white text-sm font-semibold rounded-lg px-6 py-2.5 transition-opacity hover:opacity-90"
