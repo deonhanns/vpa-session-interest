@@ -238,7 +238,7 @@ function ScheduleInner() {
           <span style={{ color: "#E07B39" }} className="font-semibold">Express your interest</span>{" "}
           and we&apos;ll be in touch. Not registered yet?{" "}
           <a
-            href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
+            href="https://book.stripe.com/14AaEZ6ZE6N88ql1eJ5Rm02"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold underline"
@@ -303,7 +303,7 @@ function ScheduleInner() {
           Century City Conference Centre · Cape Town · 6–9 October 2026
         </p>
         <a
-          href="https://book.stripe.com/bJe14pfwa0oK9upf5z5Rm00"
+          href="https://book.stripe.com/14AaEZ6ZE6N88ql1eJ5Rm02"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block text-white text-sm font-semibold rounded-lg px-6 py-2.5 transition-opacity hover:opacity-90"
