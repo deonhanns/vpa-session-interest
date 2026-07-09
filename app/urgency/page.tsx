@@ -19,24 +19,29 @@ export default function UrgencyPage() {
   return (
     <div style={{
       display: "flex",
-      flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
       minHeight: "100vh",
       padding: "20px 16px",
       background: "transparent",
-      gap: "16px",
     }}>
-      <UrgencyBanner variant="standalone" />
-
-      {/* Tier cards */}
+      {/* Single unified card */}
       <div style={{
         background: "#1A1A1A",
         borderRadius: "12px",
-        padding: "20px 16px",
+        padding: "20px 20px",
         maxWidth: "600px",
         width: "100%",
+        color: "white",
+        fontFamily: "inherit",
       }}>
+        {/* Urgency banner — embedded (no outer wrapper) */}
+        <UrgencyBanner variant="standalone" embedded />
+
+        {/* Separator */}
+        <div style={{ borderTop: "1px solid #333", margin: "16px 0" }} />
+
+        {/* Tier cards */}
         <p style={{
           fontSize: "11px",
           fontWeight: "700",
@@ -44,7 +49,7 @@ export default function UrgencyPage() {
           textTransform: "uppercase",
           letterSpacing: "0.05em",
           textAlign: "center",
-          margin: "0 0 14px 0",
+          margin: "0 0 12px 0",
         }}>
           Price Progression
         </p>
