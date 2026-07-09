@@ -248,11 +248,11 @@ function ScheduleInner() {
             Register here →
           </a>
         </p>
-      </div>
 
-      {/* Urgency countdown banner */}
-      <div className="mb-6">
-        <UrgencyBanner variant="inline" />
+        {/* Separator + urgency */}
+        <div style={{ borderTop: "1px solid #333", marginTop: "14px", paddingTop: "14px" }}>
+          <UrgencyBanner variant="inline" embedded />
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-5">

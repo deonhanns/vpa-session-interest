@@ -67,9 +67,10 @@ function formatDeadlineDate(d: Date): string {
 
 type Props = {
   variant: "inline" | "standalone";
+  embedded?: boolean;
 };
 
-export default function UrgencyBanner({ variant }: Props) {
+export default function UrgencyBanner({ variant, embedded = false }: Props) {
   const [tierInfo, setTierInfo] = useState<TierInfo>(() => getTierInfo(new Date()));
   const [countdown, setCountdown] = useState("");
 
@@ -90,22 +91,12 @@ export default function UrgencyBanner({ variant }: Props) {
   const isStandalone = variant === "standalone";
   const hasCountdown = tierInfo.deadline !== null;
 
-  return (
-    <div
-      style={{
-        background: "#1A1A1A",
-        borderRadius: isStandalone ? "12px" : "12px",
-        padding: isStandalone ? "20px 24px" : "16px 16px",
-        color: "white",
-        fontFamily: "inherit",
-        maxWidth: isStandalone ? "600px" : undefined,
-        margin: isStandalone ? "0 auto" : undefined,
-      }}
-    >
+  const inner = (
+    <>
       {/* Headline */}
-      <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "14px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "10px" }}>
         <span style={{ fontSize: "14px" }}>⏰</span>
-        <span style={{ fontSize: "13px", fontWeight: "700", letterSpacing: "0.01em", color: "#F5F0EB" }}>
+        <span style={{ fontSize: "13px", fontWeight: "700", letterSpacing: "0.01em", color: embedded ? "#F5F0EB" : "#F5F0EB" }}>
           Time is running out! Get your ticket
         </span>
       </div>
@@ -125,7 +116,7 @@ export default function UrgencyBanner({ variant }: Props) {
           gap: "2px",
         }}>
           <span style={{
-            fontSize: "28px",
+            fontSize: "26px",
             fontWeight: "700",
             color: "#E07B39",
             lineHeight: 1,
@@ -205,6 +196,26 @@ export default function UrgencyBanner({ variant }: Props) {
           </p>
         )}
       </div>
+    </>
+  );
+
+  if (embedded) {
+    return inner;
+  }
+
+  return (
+    <div
+      style={{
+        background: "#1A1A1A",
+        borderRadius: isStandalone ? "12px" : "12px",
+        padding: isStandalone ? "20px 24px" : "16px 16px",
+        color: "white",
+        fontFamily: "inherit",
+        maxWidth: isStandalone ? "600px" : undefined,
+        margin: isStandalone ? "0 auto" : undefined,
+      }}
+    >
+      {inner}
     </div>
   );
 }
