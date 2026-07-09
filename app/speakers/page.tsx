@@ -4,6 +4,7 @@ import { useState } from "react";
 import { speakers } from "@/lib/speakers";
 import { trackConfig, days } from "@/lib/sessions";
 import type { Speaker } from "@/lib/speakers";
+import UrgencyBanner from "@/components/UrgencyBanner";
 
 function VideoPlaceholder() {
   return (
@@ -235,6 +236,11 @@ export default function SpeakersPage() {
             Register here →
           </a>
         </p>
+      </div>
+
+      {/* Urgency countdown banner */}
+      <div className="mb-6">
+        <UrgencyBanner variant="inline" />
       </div>
 
       <div className="flex gap-2 mb-5 overflow-x-auto pb-1">

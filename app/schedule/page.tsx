@@ -6,6 +6,7 @@ import { sessions, days, trackConfig } from "@/lib/sessions";
 import type { Session } from "@/lib/sessions";
 import Toast from "@/components/Toast";
 import { Suspense } from "react";
+import UrgencyBanner from "@/components/UrgencyBanner";
 
 type Counts = Record<string, number>;
 
@@ -247,6 +248,11 @@ function ScheduleInner() {
             Register here →
           </a>
         </p>
+      </div>
+
+      {/* Urgency countdown banner */}
+      <div className="mb-6">
+        <UrgencyBanner variant="inline" />
       </div>
 
       <div className="flex flex-wrap gap-2 mb-5">
