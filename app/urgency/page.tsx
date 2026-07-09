@@ -18,19 +18,15 @@ export default function UrgencyPage() {
 
   return (
     <div style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
       minHeight: "100vh",
-      padding: "20px 16px",
+      padding: "0",
       background: "transparent",
     }}>
-      {/* Single unified card */}
+      {/* Single unified card — fills full width */}
       <div style={{
         background: "#1A1A1A",
-        borderRadius: "12px",
-        padding: "20px 20px",
-        maxWidth: "600px",
+        borderRadius: "0",
+        padding: "24px 24px",
         width: "100%",
         color: "white",
         fontFamily: "inherit",
