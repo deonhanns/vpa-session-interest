@@ -74,6 +74,18 @@ export default async function Home() {
           ✕
         </a>
 
+        {/* Back to VPA bar */}
+        <nav style={{background:"#1A1A1A", padding:"10px 20px", display:"flex", alignItems:"center", borderRadius:"16px 16px 0 0"}}>
+          <a
+            href="https://www.visualpractitionersafrica.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{color:"#E07B39", fontSize:"12px", fontWeight:"600", textDecoration:"none", display:"inline-flex", alignItems:"center", gap:"4px"}}
+          >
+            ← Back to VPA
+          </a>
+        </nav>
+
         <div className="min-w-0 px-4 py-6 max-w-2xl mx-auto" style={{minHeight: "2400px"}}>
 
           {/* Header */}

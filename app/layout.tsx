@@ -16,16 +16,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${roboto.className} text-gray-900 antialiased`} style={{background:"#F5F0EB"}}>
-        <nav style={{background:"#1A1A1A", padding:"10px 16px", display:"flex", alignItems:"center"}}>
-          <a
-            href="https://www.visualpractitionersafrica.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{color:"#E07B39", fontSize:"12px", fontWeight:"600", textDecoration:"none", display:"inline-flex", alignItems:"center", gap:"4px"}}
-          >
-            ← Back to VPA
-          </a>
-        </nav>
         {children}
       </body>
     </html>
