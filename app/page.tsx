@@ -1,6 +1,7 @@
 import { sessions, days, trackConfig } from "@/lib/sessions";
 import { supabaseAdmin } from "@/lib/supabase";
 import SessionCard from "@/components/SessionCard";
+import UrgencyBanner from "@/components/UrgencyBanner";
 
 async function getCounts(): Promise<Record<string, number>> {
   try {
@@ -109,6 +110,11 @@ export default async function Home() {
                 Register here →
               </a>
             </p>
+          </div>
+
+          {/* Urgency countdown banner */}
+          <div className="mb-6">
+            <UrgencyBanner variant="inline" />
           </div>
 
           {/* Track legend — exclude break */}
