@@ -16,25 +16,25 @@ type TierInfo = {
 const STRIPE_URL = "https://book.stripe.com/14AaEZ6ZE6N88ql1eJ5Rm02";
 const VPA_URL = "https://www.visualpractitionersafrica.com";
 
-const TIERS: { until: Date; label: string; price: number }[] = [
+export const PRICE_TIERS: { until: Date; label: string; price: number }[] = [
   { until: new Date("2026-08-01T00:00:00"), label: "Early Bird", price: 550 },
   { until: new Date("2026-09-01T00:00:00"), label: "Standard", price: 700 },
   { until: new Date("2026-10-01T00:00:00"), label: "Late", price: 850 },
   { until: new Date("2026-10-10T00:00:00"), label: "Last Minute", price: 1100 },
 ];
 
-function getTierInfo(now: Date): TierInfo {
-  for (let i = 0; i < TIERS.length; i++) {
-    if (now < TIERS[i].until) {
+export function getTierInfo(now: Date): TierInfo {
+  for (let i = 0; i < PRICE_TIERS.length; i++) {
+    if (now < PRICE_TIERS[i].until) {
       return {
-        current: { label: TIERS[i].label, price: TIERS[i].price },
-        next: i + 1 < TIERS.length ? { label: TIERS[i + 1].label, price: TIERS[i + 1].price } : null,
-        deadline: TIERS[i].until,
+        current: { label: PRICE_TIERS[i].label, price: PRICE_TIERS[i].price },
+        next: i + 1 < PRICE_TIERS.length ? { label: PRICE_TIERS[i + 1].label, price: PRICE_TIERS[i + 1].price } : null,
+        deadline: PRICE_TIERS[i].until,
       };
     }
   }
   // Past all tiers — show highest price, no countdown
-  const last = TIERS[TIERS.length - 1];
+  const last = PRICE_TIERS[PRICE_TIERS.length - 1];
   return {
     current: { label: last.label, price: last.price },
     next: null,
