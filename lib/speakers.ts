@@ -25,7 +25,7 @@ export const speakers: Speaker[] = [
     company: "The Grove Consultants International",
     country: "USA",
     countryCodes: ["us"],
-    website: "https://www.grove.com",
+    website: "https://www.thegrove.com/courses/digital-graphic-recording-intensive",
     bio: "David Sibbet is widely regarded as the father of visual facilitation. In 1977 he founded The Grove Consultants International in San Francisco and spent the next five decades pioneering the use of large-scale interactive graphics to help organisations think, align, and move forward. His clients have included Apple, Nike, Adobe, HP, and Procter & Gamble. He is the author of four landmark books: Visual Meetings, Visual Teams, Visual Leaders, and Visual Consulting, all published by John Wiley & Sons. The Organisation Development Network awarded him their Lifetime Achievement Award. He is a certified Jungian Deep Coach and is now focused on writing, mentoring, and supporting the next generation of visual practitioners.",
     sessionTitle: "Conceptual Jazz with the Group Graphics Keyboard",
     sessionDescription: "David's opening keynote introduces his new work on the Art of Process Design, exploring how visual facilitators can work more fluidly and flexibly across formats, using simpler, more interactive practices. He is particularly looking forward to connecting with practitioners who are imagining their way into a world laced with AI and virtual work.",
