@@ -26,9 +26,9 @@ export const speakers: Speaker[] = [
     country: "USA",
     countryCodes: ["us"],
     website: "https://www.thegrove.com/courses/digital-graphic-recording-intensive",
-    bio: "David Sibbet is widely regarded as the father of visual facilitation. In 1977 he founded The Grove Consultants International in San Francisco and spent the next five decades pioneering the use of large-scale interactive graphics to help organisations think, align, and move forward. His clients have included Apple, Nike, Adobe, HP, and Procter & Gamble. He is the author of four landmark books: Visual Meetings, Visual Teams, Visual Leaders, and Visual Consulting, all published by John Wiley & Sons. The Organisation Development Network awarded him their Lifetime Achievement Award. He is a certified Jungian Deep Coach and is now focused on writing, mentoring, and supporting the next generation of visual practitioners.",
-    sessionTitle: "Conceptual Jazz with the Group Graphics Keyboard",
-    sessionDescription: "David's opening keynote introduces his new work on the Art of Process Design, exploring how visual facilitators can work more fluidly and flexibly across formats, using simpler, more interactive practices. He is particularly looking forward to connecting with practitioners who are imagining their way into a world laced with AI and virtual work.",
+    bio: "David Sibbet is widely regarded as the father of visual facilitation. In 1977 he founded The Grove Consultants International in San Francisco and spent the next five decades pioneering the use of large-scale interactive graphics to help organisations think, align, and move forward. His clients have included Apple, Nike, Adobe, HP, and Procter & Gamble. He is the author of four landmark books: Visual Meetings, Visual Teams, Visual Leaders, and Visual Consulting, all published by John Wiley & Sons. The Organisation Development Network awarded him their Lifetime Achievement Award. He is a certified Jungian Deep Coach and is now writing a new book on Visual Intelligence.",
+    sessionTitle: "Visual Intelligence: Upgrading Awareness in the Age of the Thinking Machine",
+    sessionDescription: "Fifty-four years of writing on the wall for every kind of organisation, level, and culture has left David Sibbet with a highly developed sense of what visualisation can and cannot do. He is now writing a book on Visual Intelligence, recounting six of his most impactful facilitative experiences, all with groups still successfully evolving the organisations involved. In this keynote he shares the key takeaways from this inquiry, aimed at the kind of group intelligence possible when people learn to use their visual faculties fully. Visual intelligence can be developed, and it can support the values-based decision making that will be necessary in the age of AI.",
     track: "keynote",
     photo: img("1r3YrsgczfRG_iSsSCjky-lv29L07Ai2p"),
     videoUrl: "",
@@ -48,7 +48,7 @@ export const speakers: Speaker[] = [
     track: "art",
     photo: img("1O_cRxO4ncc9LhiZ4_X3dwyqk4d96PX3a"),
     videoUrl: "https://youtu.be/nI_FrceQnkE",
-    sessionId: "wed-flare"
+    sessionId: "thu-flare"
   },
   {
     id: "deon-hanns",
@@ -89,7 +89,7 @@ export const speakers: Speaker[] = [
     country: "Germany",
     countryCodes: ["de"],
     website: "https://www.visualfacilitators.com/en/",
-    bio: "Matthias Weitbrecht is a European pioneer in strategy visualization, process facilitation, and graphic recording. Since 2005 he has built Visual Facilitators GmbH into one of the market leaders in the German-speaking world and the Middle East, with a team of over 35 visual facilitators. He is the author of Co-Create! Das Visualisierungs-Buch (Wiley), and the first European Certified Master Visual Practitioner®. His work spans corporate strategy, organisational development, and leadership transformation.",
+    bio: "Matthias Weitbrecht is a European pioneer in strategy visualization, process facilitation, and graphic recording. Since 2005 he has built Visual Facilitators GmbH into one of the market leaders in the German-speaking world and the Middle East, with a team of over 35 visual facilitators. He is the author of Co-Create! Das Visualisierungs-Buch (Wiley), and the first European Certified Master Visual Practitioner\u00ae. His work spans corporate strategy, organisational development, and leadership transformation.",
     sessionTitle: "Drawing the Line: A Privacy-First, Human-First AI Blueprint",
     sessionDescription: "As AI reshapes how organisations think and communicate, visual practitioners face new ethical questions. This session explores a framework for navigating AI integration in visual practice, putting privacy and human dignity at the centre of every decision.",
     track: "business",
@@ -100,34 +100,34 @@ export const speakers: Speaker[] = [
   {
     id: "gill-cromhout",
     name: "Gill Cromhout",
-    role: "Founder & Bikablo® Certified Global Trainer",
+    role: "Founder & Bikablo\u00ae Certified Global Trainer",
     company: "Drawn In",
     country: "South Africa",
     countryCodes: ["za"],
     website: "https://drawnin.co",
-    bio: "Gill Cromhout is the founder of Drawn In (South Africa), a Bikablo® Certified Global Trainer, and Official Reseller of Neuland in South Africa. She is a skilled facilitator who creates spaces where people feel seen, valued, and able to express their thinking with clarity and confidence. She believes that the capacity to transform our world already lives within each of us, the facilitator's role is simply to bring that inherent capability to the surface.",
+    bio: "Gill Cromhout is the founder of Drawn In (South Africa), a Bikablo\u00ae Certified Global Trainer, and Official Reseller of Neuland in South Africa. She is a skilled facilitator who creates spaces where people feel seen, valued, and able to express their thinking with clarity and confidence. She believes that the capacity to transform our world already lives within each of us, the facilitator's role is simply to bring that inherent capability to the surface.",
     sessionTitle: "Symbol Safari: Co-Creating Meaning",
-    sessionDescription: "This hands-on session introduces Bikablo®'s Symbol Safari, an engaging approach that helps groups collaboratively transform abstract concepts into clear, meaningful visuals. Rather than relying on inspiration or creative talent, participants explore a structured yet playful way of inventing metaphors together. Co-presented with Maaike Borsboom.",
+    sessionDescription: "This hands-on session introduces Bikablo\u00ae's Symbol Safari, an engaging approach that helps groups collaboratively transform abstract concepts into clear, meaningful visuals. Rather than relying on inspiration or creative talent, participants explore a structured yet playful way of inventing metaphors together. Co-presented with Maaike Borsboom.",
     track: "art",
     photo: img("1HqS2TUKCYMEf7mi28h9K3KKmJWG1GFBO"),
     videoUrl: "",
-    sessionId: "wed-symbol"
+    sessionId: "fri-symbol"
   },
   {
     id: "maaike-borsboom",
     name: "Maaike Borsboom",
-    role: "Founder & Bikablo® Certified Global Trainer",
+    role: "Founder & Bikablo\u00ae Certified Global Trainer",
     company: "INKSIGHT",
     country: "Netherlands",
     countryCodes: ["nl"],
     website: "https://inksight.nl/en/",
-    bio: "Maaike Borsboom is the founder of INKSIGHT (Netherlands) and a Bikablo® Certified Global Trainer. With a background as a team manager and mediator in social work, she facilitates learning processes that spark visual thinking, creativity, and meaningful dialogue. By combining Solution-Focused Dialogues with visualisation, she helps individuals and groups gain clarity by literally making their thinking visible.",
+    bio: "Maaike Borsboom is the founder of INKSIGHT (Netherlands) and a Bikablo\u00ae Certified Global Trainer. With a background as a team manager and mediator in social work, she facilitates learning processes that spark visual thinking, creativity, and meaningful dialogue. By combining Solution-Focused Dialogues with visualisation, she helps individuals and groups gain clarity by literally making their thinking visible.",
     sessionTitle: "Symbol Safari: Co-Creating Meaning",
-    sessionDescription: "This hands-on session introduces Bikablo®'s Symbol Safari, an engaging approach that helps groups collaboratively transform abstract concepts into clear, meaningful visuals. Rather than relying on inspiration or creative talent, participants explore a structured yet playful way of inventing metaphors together. Co-presented with Gill Cromhout.",
+    sessionDescription: "This hands-on session introduces Bikablo\u00ae's Symbol Safari, an engaging approach that helps groups collaboratively transform abstract concepts into clear, meaningful visuals. Rather than relying on inspiration or creative talent, participants explore a structured yet playful way of inventing metaphors together. Co-presented with Gill Cromhout.",
     track: "art",
     photo: img("1CMOjMXlctzcSSBY9MaENk82CBgeh-PE4"),
     videoUrl: "",
-    sessionId: "wed-symbol"
+    sessionId: "fri-symbol"
   },
   {
     id: "nora-sheffe",
@@ -190,7 +190,7 @@ export const speakers: Speaker[] = [
     track: "art",
     photo: img("1B3knoneG4xmvx-nwIlRzApzPvbytCETr"),
     videoUrl: "",
-    sessionId: "thu-characters"
+    sessionId: "thu-flare"
   },
   {
     id: "axelle-vanquaillie",
@@ -306,13 +306,13 @@ export const speakers: Speaker[] = [
   },
   {
     id: "jess-tenorio",
-    name: "Jess Tenório",
+    name: "Jess Ten\u00f3rio",
     role: "Graphic Facilitator, Visual Thinking Educator & Author",
-    company: "Jess Tenório Facilitação Gráfica",
+    company: "Jess Ten\u00f3rio Facilita\u00e7\u00e3o Gr\u00e1fica",
     country: "Brazil",
     countryCodes: ["br"],
     website: "https://www.jesstenorio.com",
-    bio: "Jess Tenório is a Brazilian graphic facilitator, visual thinking educator, and author based in São Paulo. Her work connects visual practice, deep listening, and participatory facilitation across corporate, educational, and community contexts. She believes that when we draw together, we make each other visible.",
+    bio: "Jess Ten\u00f3rio is a Brazilian graphic facilitator, visual thinking educator, and author based in S\u00e3o Paulo. Her work connects visual practice, deep listening, and participatory facilitation across corporate, educational, and community contexts. She believes that when we draw together, we make each other visible.",
     sessionTitle: "Drawing Voices: Graphic Facilitation with Traditional Peoples in Brazil",
     sessionDescription: "What happens when the facilitator puts down assumptions and picks up a marker in a community where words alone are not enough? This session shares stories from the field, real experiences of using graphic facilitation in cross-cultural and multilingual settings with traditional peoples in Brazil. Every community deserves a visual record of its own story.",
     track: "business",
