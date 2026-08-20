@@ -31,7 +31,7 @@ export const speakers: Speaker[] = [
     sessionDescription: "David Sibbet has spent 54 years writing on the wall for organisations of every kind, level, and culture. He is now writing a book on Visual Intelligence, asking what it is about charts, graphics, visual frameworks, and process models that makes visual intelligence so useful for groups. In this keynote he shares key insights from that inquiry, aimed at helping conferees understand the kind of group judgment that becomes possible when people learn to use their visual faculties fully. A central question: what human faculties cannot be replicated by AI, and where can AI be a genuinely helpful partner?",
     track: "keynote",
     photo: img("1r3YrsgczfRG_iSsSCjky-lv29L07Ai2p"),
-    videoUrl: "",
+    videoUrl: "https://youtu.be/qiBx3BksZng",
     sessionId: "wed-opening"
   },
   {
@@ -110,7 +110,7 @@ export const speakers: Speaker[] = [
     sessionDescription: "This hands-on session introduces Bikablo\u00ae's Symbol Safari, an engaging approach that helps groups collaboratively transform abstract concepts into clear, meaningful visuals. Rather than relying on inspiration or creative talent, participants explore a structured yet playful way of inventing metaphors together. Co-presented with Maaike Borsboom.",
     track: "art",
     photo: img("1HqS2TUKCYMEf7mi28h9K3KKmJWG1GFBO"),
-    videoUrl: "",
+    videoUrl: "https://youtu.be/LtMi3GAEhdg",
     sessionId: "fri-symbol"
   },
   {
@@ -126,7 +126,7 @@ export const speakers: Speaker[] = [
     sessionDescription: "This hands-on session introduces Bikablo\u00ae's Symbol Safari, an engaging approach that helps groups collaboratively transform abstract concepts into clear, meaningful visuals. Rather than relying on inspiration or creative talent, participants explore a structured yet playful way of inventing metaphors together. Co-presented with Gill Cromhout.",
     track: "art",
     photo: img("1CMOjMXlctzcSSBY9MaENk82CBgeh-PE4"),
-    videoUrl: "",
+    videoUrl: "https://youtu.be/LtMi3GAEhdg",
     sessionId: "fri-symbol"
   },
   {
@@ -142,7 +142,7 @@ export const speakers: Speaker[] = [
     sessionDescription: "When graphic recording and facilitation are treated as separate services, value is left on the table. When designed together, with scope, roles, and creative parameters clarified from the outset, something far more powerful becomes possible. This session explores what it means for facilitators and graphic recorders to operate as a true design team. Co-presented with James Durno.",
     track: "facilitation",
     photo: img("1iMS_r2zAk3cWt_kWF627x40m6k5zhLKN"),
-    videoUrl: "",
+    videoUrl: "https://youtu.be/W-hydBa8uzE",
     sessionId: "wed-partnership"
   },
   {
@@ -157,7 +157,7 @@ export const speakers: Speaker[] = [
     sessionDescription: "When graphic recording and facilitation are treated as separate services, value is left on the table. When designed together, with scope, roles, and creative parameters clarified from the outset, something far more powerful becomes possible. This session explores what it means for facilitators and graphic recorders to operate as a true design team. Co-presented with Nora Sheffe.",
     track: "facilitation",
     photo: img("1Tbyz1tOUeJRfjW6tuPbJQelLocU2hy0f"),
-    videoUrl: "",
+    videoUrl: "https://youtu.be/W-hydBa8uzE",
     sessionId: "wed-partnership"
   },
   {
