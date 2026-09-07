@@ -82,14 +82,14 @@ export const speakers: Speaker[] = [
     sessionId: "wed-nnm"
   },
   {
-    id: "matthias-weitbrecht",
-    name: "Matthias Weitbrecht",
+    id: "mathias-weitbrecht",
+    name: "Mathias Weitbrecht",
     role: "Founder & CEO",
     company: "Visual Facilitators GmbH",
     country: "Germany",
     countryCodes: ["de"],
     website: "https://www.visualfacilitators.com/en/",
-    bio: "Matthias Weitbrecht is a European pioneer in strategy visualization, process facilitation, and graphic recording. Since 2005 he has built Visual Facilitators GmbH into one of the market leaders in the German-speaking world and the Middle East, with a team of over 35 visual facilitators. He is the author of Co-Create! Das Visualisierungs-Buch (Wiley), and the first European Certified Master Visual Practitioner\u00ae. His work spans corporate strategy, organisational development, and leadership transformation.",
+    bio: "Mathias Weitbrecht is a European pioneer in strategy visualization, process facilitation, and graphic recording. Since 2005 he has built Visual Facilitators GmbH into one of the market leaders in the German-speaking world and the Middle East, with a team of over 35 visual facilitators. He is the author of Co-Create! Das Visualisierungs-Buch (Wiley), and the first European Certified Master Visual Practitioner\u00ae. His work spans corporate strategy, organisational development, and leadership transformation.",
     sessionTitle: "Drawing the Line: A Privacy-First, Human-First AI Blueprint",
     sessionDescription: "As AI reshapes how organisations think and communicate, visual practitioners face new ethical questions. This session explores a framework for navigating AI integration in visual practice, putting privacy and human dignity at the centre of every decision.",
     track: "business",
