@@ -35,6 +35,21 @@ export const speakers: Speaker[] = [
     sessionId: "wed-opening"
   },
   {
+    id: "carolina-ramalhete",
+    name: "Carolina Ramalhete",
+    role: "Visual Practitioner",
+    company: "",
+    country: "",
+    countryCodes: [],
+    bio: "Bio coming soon.",
+    sessionTitle: "Think Before Answering: Visual Thinking in the Age of AI",
+    sessionDescription: "As AI tools accelerate the pace at which answers appear, this session explores the value of slowing down to think visually before responding. A hands-on exploration of visual thinking as a deliberate practice in an increasingly fast, automated world.",
+    track: "art",
+    photo: "",
+    videoUrl: "",
+    sessionId: "wed-ai-thinking"
+  },
+  {
     id: "ben-crothers",
     name: "Ben Crothers",
     role: "Principal Facilitator",
@@ -138,7 +153,7 @@ export const speakers: Speaker[] = [
     countryCodes: ["ca"],
     website: "https://sheffeconsulting.com",
     bio: "Nora Sheffe is an internationally accredited Master Facilitator and President of Sheffe Consulting. Over 25 years she has led more than 1,000 strategic sessions across 15 countries, guiding complex multi-stakeholder conversations toward clear, high-impact outcomes. She believes the best facilitation is not accidental, it is designed.",
-    sessionTitle: "Leveraging the Facilitation & Graphic Recorder Partnership",
+    sessionTitle: "Leveraging the Facilitation and Graphic Recorder Partnership to Elevate Session Outcomes and Create Future Opportunities",
     sessionDescription: "When graphic recording and facilitation are treated as separate services, value is left on the table. When designed together, with scope, roles, and creative parameters clarified from the outset, something far more powerful becomes possible. This session explores what it means for facilitators and graphic recorders to operate as a true design team. Co-presented with James Durno.",
     track: "facilitation",
     photo: img("1iMS_r2zAk3cWt_kWF627x40m6k5zhLKN"),
@@ -153,7 +168,7 @@ export const speakers: Speaker[] = [
     country: "South Africa",
     countryCodes: ["za"],
     bio: "James Durno is widely regarded as a pioneer of graphic recording in South Africa, with over 22 years of experience as a Visual Communications Consultant and Fine Artist. He helps organisations think visually, translating complex conversations, strategies, and ideas into engaging visual narratives in real time. His clients include Microsoft, Coca-Cola, Anglo American, Barclays, Vodacom, Discovery, Investec, Deloitte, and Wits Business School, among many others.",
-    sessionTitle: "Leveraging the Facilitation & Graphic Recorder Partnership",
+    sessionTitle: "Leveraging the Facilitation and Graphic Recorder Partnership to Elevate Session Outcomes and Create Future Opportunities",
     sessionDescription: "When graphic recording and facilitation are treated as separate services, value is left on the table. When designed together, with scope, roles, and creative parameters clarified from the outset, something far more powerful becomes possible. This session explores what it means for facilitators and graphic recorders to operate as a true design team. Co-presented with Nora Sheffe.",
     track: "facilitation",
     photo: img("1Tbyz1tOUeJRfjW6tuPbJQelLocU2hy0f"),
@@ -185,12 +200,12 @@ export const speakers: Speaker[] = [
     countryCodes: ["za"],
     website: "https://nickwalshcreative.com",
     bio: "Born in Zimbabwe and educated in South Africa, Nick Walsh spent 20 years in international advertising before stepping behind the camera as a commercial film and animation director. He has come full circle to where it all started, doodling. Nick is a graphic recorder with both international and South African clients, capturing the essence of conversations in real time for audiences who love watching ideas unfold before their eyes.",
-    sessionTitle: "People in Motion: Drawing Characters that Speak",
+    sessionTitle: "Drawing Characters that Speak",
     sessionDescription: "A fast-paced, interactive session that brings visual notes to life by sketching people on the move, creating emotion, exploring visual metaphors, and telling colourful, memorable stories. Participants will learn how to draw beyond stick figures, introduce gender, race, and cultural clues, and tell a simple story through positioning of text and image.",
     track: "art",
     photo: img("1B3knoneG4xmvx-nwIlRzApzPvbytCETr"),
     videoUrl: "",
-    sessionId: "thu-flare"
+    sessionId: "wed-characters"
   },
   {
     id: "axelle-vanquaillie",
