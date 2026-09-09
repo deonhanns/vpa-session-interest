@@ -284,7 +284,7 @@ export const speakers: Speaker[] = [
     sessionDescription: "The IFVP Institute Educators Committee is building an international framework to help teachers worldwide embed visual practices into their daily work, and this session invites participants to help shape it. This is not a presentation about a framework. It is an invitation to co-create one.",
     track: "business",
     photo: img("1OGhJxqvuax5mI3A7pNuuszXfCOIWTcut"),
-    videoUrl: "",
+    videoUrl: "https://youtube.com/shorts/SZ73IN8xtwY",
     sessionId: "fri-education"
   },
   {
