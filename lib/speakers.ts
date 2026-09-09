@@ -31,7 +31,7 @@ export const speakers: Speaker[] = [
     sessionDescription: "David Sibbet has spent 54 years writing on the wall for organisations of every kind, level, and culture. He is now writing a book on Visual Intelligence, asking what it is about charts, graphics, visual frameworks, and process models that makes visual intelligence so useful for groups. In this keynote he shares key insights from that inquiry, aimed at helping conferees understand the kind of group judgment that becomes possible when people learn to use their visual faculties fully. A central question: what human faculties cannot be replicated by AI, and where can AI be a genuinely helpful partner?",
     track: "keynote",
     photo: img("1r3YrsgczfRG_iSsSCjky-lv29L07Ai2p"),
-    videoUrl: "https://youtu.be/qiBx3BksZng",
+    videoUrl: "https://youtu.be/PWKCCT6yRm4",
     sessionId: "wed-opening"
   },
   {
