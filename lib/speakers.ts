@@ -45,7 +45,7 @@ export const speakers: Speaker[] = [
     sessionTitle: "Think Before Answering: Visual Thinking in the Age of AI",
     sessionDescription: "As AI tools accelerate the pace at which answers appear, this session explores the value of slowing down to think visually before responding. A hands-on exploration of visual thinking as a deliberate practice in an increasingly fast, automated world.",
     track: "art",
-    photo: "",
+    photo: img("17gr_YinCif67RMIrKYuPn-iJPZ8RDpAt"),
     videoUrl: "",
     sessionId: "wed-ai-thinking"
   },
