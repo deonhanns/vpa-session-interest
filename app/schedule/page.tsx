@@ -10,6 +10,9 @@ import UrgencyBanner from "@/components/UrgencyBanner";
 
 type Counts = Record<string, number>;
 
+// Sessions that get the special hype treatment
+const SPOTLIGHT_IDS = new Set(["tue-cocktail", "fri-winefarm"]);
+
 function BreakRow({ session }: { session: Session }) {
   return (
     <div className="flex items-center gap-3 py-1 px-2">
@@ -50,6 +53,8 @@ function SessionCard({
     session.track !== "break"
       ? trackConfig[session.track as Exclude<typeof session.track, "break">]
       : null;
+
+  const isSpotlight = SPOTLIGHT_IDS.has(session.id);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -93,9 +98,11 @@ function SessionCard({
   return (
     <div
       id={session.id}
-      className="bg-white rounded-lg border shadow-sm overflow-hidden transition-all"
+      className="rounded-lg border shadow-sm overflow-hidden transition-all"
       style={{
-        borderColor: highlight ? "#E07B39" : "#e7e5e4",
+        background: isSpotlight ? "#FFF8EF" : "#ffffff",
+        borderColor: highlight ? "#E07B39" : isSpotlight ? "#F4B896" : "#e7e5e4",
+        borderWidth: isSpotlight ? "1.5px" : "1px",
         boxShadow: highlight ? "0 0 0 2px #E07B3940" : undefined,
       }}
     >
@@ -105,6 +112,14 @@ function SessionCard({
             {track && (
               <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded border mb-2 ${track.bg} ${track.text} ${track.border}`}>
                 {track.label}
+              </span>
+            )}
+            {isSpotlight && (
+              <span
+                className="inline-block text-xs font-semibold px-2 py-0.5 rounded border mb-2 ml-1"
+                style={{ background: "#FDEBD3", color: "#B45309", borderColor: "#F4B896" }}
+              >
+                ✨ Don&apos;t miss
               </span>
             )}
             <h3 className="text-sm font-bold text-gray-900 leading-snug">{session.title}</h3>
