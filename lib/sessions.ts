@@ -41,7 +41,6 @@ export const sessions: Session[] = [
   { id: "thu-draw", day: "Thursday, 8 October", time: "10:30–12:00", title: "Draw from Everything", presenter: "Elise White", track: "facilitation" },
   { id: "thu-community", day: "Thursday, 8 October", time: "10:30–12:00", title: "From Idea to Impact: Building a Visual Practitioner's Community That Actually Works", presenter: "Dana Rulf", track: "business" },
   { id: "thu-lunch", day: "Thursday, 8 October", time: "12:00–13:00", title: "Lunch + Sand Art Demonstration", presenter: "Winta Assefa", track: "break" },
-  { id: "thu-winefarm", day: "Thursday, 8 October", time: "13:00–17:00", title: "Optional Visit to De Grendel Wine Farm (Alternative to Open Space)", presenter: "", track: "social" },
   { id: "thu-openspace-setup", day: "Thursday, 8 October", time: "13:00–13:45", title: "Open Space Setup", presenter: "Facilitated by Kati Orav & Jo Hobson", track: "plenary" },
   { id: "thu-openspace-1", day: "Thursday, 8 October", time: "13:45–14:30", title: "Open Space Session 1", presenter: "", track: "plenary" },
   { id: "thu-break2", day: "Thursday, 8 October", time: "14:30–15:00", title: "Break", presenter: "", track: "break" },
@@ -61,6 +60,7 @@ export const sessions: Session[] = [
   { id: "fri-connection", day: "Friday, 9 October", time: "10:30–12:00", title: "Space for Connection", presenter: "", track: "plenary" },
   { id: "fri-education", day: "Friday, 9 October", time: "10:30–12:00", title: "Bringing Visual Practices into Education: Beyond a Global Framework for Teachers", presenter: "Kati Orav", track: "business" },
   { id: "fri-lunch", day: "Friday, 9 October", time: "12:00–13:00", title: "Lunch + Final Raffle", presenter: "", track: "break" },
+  { id: "fri-winefarm", day: "Friday, 9 October", time: "13:00–17:00", title: "Optional Visit to De Grendel Wine Farm", presenter: "", track: "social" },
 ];
 
 export const trackConfig: Record<Exclude<Track, "break">, { label: string; bg: string; text: string; border: string }> = {
