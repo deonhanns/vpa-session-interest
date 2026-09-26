@@ -201,7 +201,7 @@ export const speakers: Speaker[] = [
     website: "https://www.visualharvesting.com",
     bio: "With over 15 years of experience, Axelle helps organisations worldwide make complex conversations visible, meaningful, and actionable. Her work goes far beyond drawing, she helps teams think, align, and make decisions through visual language. Her motto: the more challenging, the better. She has worked on Human Rights programmes in Asian factories, training facilitators to use visual tools to shift power dynamics and enable sustainable change.",
     sessionTitle: "Visual Tools to Change an Industry, Meeting by Meeting",
-    sessionDescription: "This session shares insights from an international Human Rights programme in Asian factories, where visual facilitation supported dialogue between factory workers and management. Participants will explore four distinct roles a visual facilitator can play in systemic change, discovering how to equip others to carry the work forward long after you have left the room.",
+    sessionDescription: "This session shares insights from an international Human Rights programme in Asian factories, where visual facilitation supported dialogue between factory workers and management. Participants will explore four distinct roles a visual facilitator can play in systemic change, discovering how to equip others to carry the work forward long after you have left the room. Axelle presents twice at the Summit on Thursday: this session at 10:30, and Drawing Tricky Concepts More Creatively with FLARE at 08:30.",
     track: "facilitation",
     photo: img("18v6RlqbkQd_1qjEQAw5PBvuUHM6hUCRL"),
     videoUrl: "https://youtube.com/shorts/mtMum9PUlgM",
