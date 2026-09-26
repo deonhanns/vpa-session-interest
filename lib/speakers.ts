@@ -50,22 +50,6 @@ export const speakers: Speaker[] = [
     sessionId: "wed-ai-thinking"
   },
   {
-    id: "ben-crothers",
-    name: "Ben Crothers",
-    role: "Principal Facilitator",
-    company: "Bright Pilots",
-    country: "Australia",
-    countryCodes: ["au"],
-    website: "https://brightpilots.com",
-    bio: "Ben has been on the pens for over 25 years, helping teams solve tough challenges through facilitation and visualisation. He is one of the original creators of the much-loved Atlassian Team Playbook, and the author of several books including Presto Sketching, Draw in 4, and 50 Remote-Friendly Icebreakers. He has worked with start-ups and large tech companies, government, universities, and non-profits across strategy, innovation, and decision-making.",
-    sessionTitle: "Drawing Tricky Concepts More Creatively with FLARE",
-    sessionDescription: "FLARE is a simple but highly effective method for drawing vague, abstract, and complex topics. In this hands-on workshop, participants will practise FLARE by drawing intangible concepts, apply it to turn clichés into clarity, and discover how to use the prompts in their facilitation practice to help teams have more insightful conversations.",
-    track: "art",
-    photo: img("1O_cRxO4ncc9LhiZ4_X3dwyqk4d96PX3a"),
-    videoUrl: "https://youtu.be/nI_FrceQnkE",
-    sessionId: "thu-flare"
-  },
-  {
     id: "deon-hanns",
     name: "Deon Hanns",
     role: "Visual Storyteller & Strategic Narrative Architect",
@@ -158,7 +142,7 @@ export const speakers: Speaker[] = [
     track: "facilitation",
     photo: img("1iMS_r2zAk3cWt_kWF627x40m6k5zhLKN"),
     videoUrl: "https://youtu.be/W-hydBa8uzE",
-    sessionId: "wed-partnership"
+    sessionId: "thu-partnership"
   },
   {
     id: "james-durno",
@@ -173,7 +157,7 @@ export const speakers: Speaker[] = [
     track: "facilitation",
     photo: img("1Tbyz1tOUeJRfjW6tuPbJQelLocU2hy0f"),
     videoUrl: "https://youtu.be/W-hydBa8uzE",
-    sessionId: "wed-partnership"
+    sessionId: "thu-partnership"
   },
   {
     id: "jim-nuttle",
