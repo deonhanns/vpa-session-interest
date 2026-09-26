@@ -12,7 +12,7 @@ export type Session = {
 export const sessions: Session[] = [
   // TUESDAY 6 OCTOBER
   { id: "tue-registration", day: "Tuesday, 6 October", time: "15:00", title: "Registration at Venue", presenter: "", track: "plenary" },
-  { id: "tue-cocktail", day: "Tuesday, 6 October", time: "18:00–20:00", title: "Cocktail Evening, Two Oceans Aquarium, V&A Waterfront", presenter: "", track: "social" },
+  { id: "tue-cocktail", day: "Tuesday, 6 October", time: "18:30–20:00", title: "Cocktail Evening, Two Oceans Aquarium, V&A Waterfront", presenter: "", track: "social" },
 
   // WEDNESDAY 7 OCTOBER
   { id: "wed-breakfast", day: "Wednesday, 7 October", time: "08:00–08:30", title: "Breakfast", presenter: "", track: "break" },
@@ -23,7 +23,7 @@ export const sessions: Session[] = [
   { id: "wed-ai-blueprint", day: "Wednesday, 7 October", time: "10:30–12:00", title: "Drawing the Line: A Privacy-First, Human-First AI Blueprint", presenter: "Mathias Weitbrecht", track: "business" },
   { id: "wed-lunch", day: "Wednesday, 7 October", time: "12:00–13:00", title: "Lunch + Fun with Neuland", presenter: "Gill Cromhout", track: "break" },
   { id: "wed-characters", day: "Wednesday, 7 October", time: "13:00–14:30", title: "Drawing Characters that Speak", presenter: "Nick Walsh", track: "art" },
-  { id: "wed-partnership", day: "Wednesday, 7 October", time: "13:00–14:30", title: "Leveraging the Facilitation and Graphic Recorder Partnership to Elevate Session Outcomes and Create Future Opportunities", presenter: "Nora Sheffe & James Durno", track: "facilitation" },
+  { id: "wed-connection-1", day: "Wednesday, 7 October", time: "13:00–14:30", title: "Space for Connection", presenter: "", track: "plenary" },
   { id: "wed-survival", day: "Wednesday, 7 October", time: "13:00–14:30", title: "Don't Panic! A Survival Guide for Recorders", presenter: "Jim Nuttle", track: "business" },
   { id: "wed-break2", day: "Wednesday, 7 October", time: "14:30–15:00", title: "Break", presenter: "", track: "break" },
   { id: "wed-ai-plenary", day: "Wednesday, 7 October", time: "15:00–16:30", title: "Plenary: The Future of Visual Practice in the Age of AI (Working Groups)", presenter: "", track: "plenary" },
@@ -33,15 +33,16 @@ export const sessions: Session[] = [
 
   // THURSDAY 8 OCTOBER
   { id: "thu-breakfast", day: "Thursday, 8 October", time: "08:00–08:30", title: "Breakfast", presenter: "", track: "break" },
-  { id: "thu-flare", day: "Thursday, 8 October", time: "08:30–10:00", title: "Drawing Tricky Concepts More Creatively with FLARE", presenter: "Ben Crothers", track: "art" },
-  { id: "thu-visual-tools", day: "Thursday, 8 October", time: "08:30–10:00", title: "Visual Tools to Change an Industry, Meeting by Meeting", presenter: "Axelle Vanquallie", track: "facilitation" },
+  { id: "thu-flare", day: "Thursday, 8 October", time: "08:30–10:00", title: "Drawing Tricky Concepts More Creatively with FLARE", presenter: "Axelle Vanquallie", track: "art" },
+  { id: "thu-partnership", day: "Thursday, 8 October", time: "08:30–10:00", title: "Leveraging the Facilitation and Graphic Recorder Partnership to Elevate Session Outcomes and Create Future Opportunities", presenter: "Nora Sheffe & James Durno", track: "facilitation" },
   { id: "thu-tourism", day: "Thursday, 8 October", time: "08:30–10:00", title: "The Visual Journey: Transforming Tourism Experience through Visual Thinking", presenter: "Sonia Garcia Farina", track: "business" },
   { id: "thu-break1", day: "Thursday, 8 October", time: "10:00–10:30", title: "Break", presenter: "", track: "break" },
-  { id: "thu-signature", day: "Thursday, 8 October", time: "10:30–12:00", title: "The Signature Behind Your Sketch", presenter: "Ben Crothers & Axelle Vanquallie", track: "art" },
   { id: "thu-draw", day: "Thursday, 8 October", time: "10:30–12:00", title: "Draw from Everything", presenter: "Elise White", track: "facilitation" },
   { id: "thu-community", day: "Thursday, 8 October", time: "10:30–12:00", title: "From Idea to Impact: Building a Visual Practitioner's Community That Actually Works", presenter: "Dana Rulf", track: "business" },
+  { id: "thu-visual-tools", day: "Thursday, 8 October", time: "10:30–12:00", title: "Visual Tools to Change an Industry, Meeting by Meeting", presenter: "Axelle Vanquallie", track: "facilitation" },
+  { id: "thu-connection-1", day: "Thursday, 8 October", time: "10:30–12:00", title: "Space for Connection", presenter: "", track: "plenary" },
   { id: "thu-lunch", day: "Thursday, 8 October", time: "12:00–13:00", title: "Lunch + Sand Art Demonstration", presenter: "Winta Assefa", track: "break" },
-  { id: "thu-openspace-setup", day: "Thursday, 8 October", time: "13:00–13:45", title: "Open Space Setup", presenter: "Facilitated by Kati Orav & Jo Hobson", track: "plenary" },
+  { id: "thu-openspace-setup", day: "Thursday, 8 October", time: "13:00–13:45", title: "Open Space Setup", presenter: "Facilitated by Lita Currie & Jo Hobson", track: "plenary" },
   { id: "thu-openspace-1", day: "Thursday, 8 October", time: "13:45–14:30", title: "Open Space Session 1", presenter: "", track: "plenary" },
   { id: "thu-break2", day: "Thursday, 8 October", time: "14:30–15:00", title: "Break", presenter: "", track: "break" },
   { id: "thu-openspace-2", day: "Thursday, 8 October", time: "15:00–15:40", title: "Open Space Session 2", presenter: "", track: "plenary" },
